@@ -31,7 +31,7 @@
 
           {{ partial "tags.html" . }}
 
-          {{ if site.Params.docs_section_pager }}
+          {{ if .Site.Params.docs_section_pager }}
           <div class="article-widget">
             {{ partial "section_pager" . }}
           </div>
@@ -39,7 +39,7 @@
         </div>
 
         <div class="body-footer">
-          <p>{{ i18n "last_updated" }} {{ $.Lastmod.Format site.Params.date_format }}</p>
+          <p>{{ i18n "last_updated" }} {{ $.Lastmod.Format .Site.Params.date_format }}</p>
 
           {{ partial "page_edit" . }}
 

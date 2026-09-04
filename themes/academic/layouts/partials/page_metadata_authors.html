@@ -2,9 +2,9 @@
 
 {{ $taxonomy := "authors" }}
 {{ with .Param $taxonomy }}
-  {{ $link_authors := site.Params.link_authors | default true }}
+  {{ $link_authors := .Site.Params.link_authors | default true }}
   {{ range $index, $value := . }}
-    {{- $profile_page := site.GetPage (printf "/%s/%s" $taxonomy (. | urlize)) -}}
+    {{- $profile_page := .Site.GetPage (printf "/%s/%s" $taxonomy (. | urlize)) -}}
     {{- $name := $profile_page.Params.name | default ($value|markdownify) -}}
     {{- if gt $index 0 }}, {{ end -}}
     <span>

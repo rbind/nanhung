@@ -9,7 +9,7 @@
 {{ end }}
 
 {{ $author := partial "functions/get_author_name" $page }}
-{{ $publisher := site.Params.org_name | default site.Title }}
+{{ $publisher := .Site.Params.org_name | default .Site.Title }}
 {{ $logo_url := printf "img/%s" (site.Params.logo | default "icon-512.png") | absURL }}
 
 <script type="application/ld+json">

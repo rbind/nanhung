@@ -15,7 +15,7 @@
 {{ end }}
 
 {{/* Query */}}
-{{ $tags := first $items_count (index site.Taxonomies $taxonomy).ByCount }}
+{{ $tags := first $items_count (index .Site.Taxonomies $taxonomy).ByCount }}
 {{ $count := len $tags }}
 
 <div class="row">

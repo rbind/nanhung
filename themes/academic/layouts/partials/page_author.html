@@ -1,7 +1,7 @@
 {{/* Author profile box */}}
 
 {{/* Don't show author box on normal pages or if author box disabled. */}}
-{{ if ne .Type "page" | and (not (or (eq site.Params.profile false) (eq .Params.profile false))) }}
+{{ if ne .Type "page" | and (not (or (eq .Site.Params.profile false) (eq .Params.profile false))) }}
 
 {{/* Display superuser if superuser exists and page authors are not explicitly specified. */}}
 {{/* Otherwise, display first author if a profile for them exists. */}}
@@ -17,18 +17,18 @@
   {{ $author_urlized = urlize $first_author }}
 {{ end }}
 
-{{ $site_type := site.Params.site_type | default "Person" }}
+{{ $site_type := .Site.Params.site_type | default "Person" }}
 {{ $taxonomy := "authors" }}
-{{ $profile_page := site.GetPage (printf "/%s/%s" $taxonomy $author_urlized) }}
+{{ $profile_page := .Site.GetPage (printf "/%s/%s" $taxonomy $author_urlized) }}
 {{ with $profile_page }}
   {{/* If it's a personal site and primary page author is superuser, link to the homepage rather than their profile page. */}}
   {{ $profile_url := .RelPermalink }}
   {{ if and (eq $site_type "Person") (eq .Params.superuser true) }}
-    {{ $profile_url = site.BaseURL }}
+    {{ $profile_url = .Site.BaseURL }}
   {{ end }}
   {{ $avatar := (.Resources.ByType "image").GetMatch "*avatar*" }}
   <div class="media author-card content-widget-hr">
-    {{ if and site.Params.gravatar .Params.email }}
+    {{ if and .Site.Params.gravatar .Params.email }}
       <img class="portrait mr-3" src="https://s.gravatar.com/avatar/{{ md5 .Params.email }}?s=200')" alt="Avatar">
     {{ else if $avatar }}
       {{ $avatar_image := $avatar.Fill "250x250 Center" }}

@@ -3,7 +3,7 @@
 {{ $page := . }}
 
 {{/* Get publisher as fall back. */}}
-{{ $publisher := site.Params.org_name | default site.Title }}
+{{ $publisher := .Site.Params.org_name | default .Site.Title }}
 
 {{ $author := "" }}
 {{ $author_username := "" }}
@@ -16,7 +16,7 @@
 {{ end }}
 
 {{ $taxonomy := "authors" }}
-{{ $profile_page := site.GetPage (printf "/%s/%s" $taxonomy $author_username) }}
+{{ $profile_page := .Site.GetPage (printf "/%s/%s" $taxonomy $author_username) }}
 {{ with $profile_page }}
   {{ $author = .Params.name | default .Title }}
 {{ else }}
