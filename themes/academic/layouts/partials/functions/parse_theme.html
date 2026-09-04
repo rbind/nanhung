@@ -1,10 +1,10 @@
 {{- $scr := .Scratch -}}
 
 {{/* Get name of site's Theme. Precedence: Params.toml > Default (Minimal) */}}
-{{- $theme_index := (.Site.Params.theme | lower | replaceRE "\\s" "_") | default "minimal" -}}
+{{- $theme_index := (site.Params.theme | lower | replaceRE "\\s" "_") | default "minimal" -}}
 
 {{/* Get name of site's Font Set. Precedence: Params.toml > Theme > Default (Minimal) */}}
-{{- $font_index := (.Site.Params.font | lower | replaceRE "\\s" "_") | default ((index hugo.Data.themes $theme_index).font | lower | replaceRE "\\s" "_") | default $theme_index -}}
+{{- $font_index := (site.Params.font | lower | replaceRE "\\s" "_") | default ((index hugo.Data.themes $theme_index).font | lower | replaceRE "\\s" "_") | default $theme_index -}}
 {{- $font_index := cond (isset hugo.Data.fonts $font_index) $font_index "minimal" -}}
 
 {{/* Get Font Size. */}}

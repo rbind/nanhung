@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="{{ .Site.Language.Locale | default "en-us" }}">
+<html lang="{{ site.Language.Locale | default "en-us" }}">
 <head>
   {{ $css := hugo.Data.assets.css }}
   {{ $cdn_url_reveal := "https://cdnjs.cloudflare.com/ajax/libs/reveal.js/3.8.0" }}
@@ -15,7 +15,7 @@
 
   <link rel="canonical" href="{{ .Permalink }}">
 
-  <title>{{ .Title }} | {{ .Site.Title }}</title>
+  <title>{{ .Title }} | {{ site.Title }}</title>
 
   <link rel="stylesheet" href="{{ $cdn_url_reveal }}/css/reveal.min.css">
   {{- $theme := $.Param "slides.theme" | default "black" -}}

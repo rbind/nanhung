@@ -2,7 +2,7 @@
 {{ $t1 := time .Date }}{{/* Start datetime. */}}
 {{ $str := slice ((time $t1).Format .Site.Params.date_format) }}{{/* Init return string with start date. */}}
 {{/* Show start time if not all day event. */}}
-{{ if not .Params.all_day }}{{ $str = $str | append ((time $t1).Format (.Site.Params.time_format)) }}{{ end }}
+{{ if not .Params.all_day }}{{ $str = $str | append ((time $t1).Format (site.Params.time_format)) }}{{ end }}
 {{/* Show event end date if provided. */}}
 {{ if .Params.date_end }}
   {{ $str = $str | append "&mdash;" }}
@@ -12,6 +12,6 @@
     {{ $str = $str | append ((time $t2).Format .Site.Params.date_format) }}
   {{ end }}
   {{/* Show end time if not all day event. */}}
-  {{ if not .Params.all_day }}{{ $str = $str | append ((time $t2).Format (.Site.Params.time_format)) }}{{ end }}
+  {{ if not .Params.all_day }}{{ $str = $str | append ((time $t2).Format (site.Params.time_format)) }}{{ end }}
 {{ end }}
 {{ return (delimit $str " ") }}

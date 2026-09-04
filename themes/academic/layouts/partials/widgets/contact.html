@@ -1,7 +1,7 @@
 {{ $ := .root }}
 {{ $page := .page }}
 {{ $autolink := default true $page.Params.autolink }}
-{{ $data := .Site.Params }}
+{{ $data := site.Params }}
 
 <!-- Contact widget -->
 <div class="row contact-widget">
@@ -122,14 +122,14 @@
 
     </ul>
 
-    {{ if and .Site.Params.map.engine $data.coordinates.latitude }}
+    {{ if and site.Params.map.engine $data.coordinates.latitude }}
     <div class="d-none">
-      <input id="map-provider" value="{{ .Site.Params.map.engine }}">
+      <input id="map-provider" value="{{ site.Params.map.engine }}">
       <input id="map-lat" value="{{ $data.coordinates.latitude }}">
       <input id="map-lng" value="{{ $data.coordinates.longitude }}">
       <input id="map-dir" value="{{ $addr_formatted }}">
-      <input id="map-zoom" value="{{ .Site.Params.map.zoom | default "15" }}">
-      <input id="map-api-key" value="{{ .Site.Params.map.api_key }}">
+      <input id="map-zoom" value="{{ site.Params.map.zoom | default "15" }}">
+      <input id="map-api-key" value="{{ site.Params.map.api_key }}">
     </div>
     <div id="map"></div>
     {{ end }}
