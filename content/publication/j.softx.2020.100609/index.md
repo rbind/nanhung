@@ -24,9 +24,6 @@ tags:
 - R
 featured: false
 
-links:
-#- name: Custom Link
-# url_pdf: '#'
 url_source: 'https://doi.org/10.1016/j.softx.2020.100609'
 links:
 - icon: file

@@ -27,9 +27,6 @@ tags:
 
 featured: false
 
-links:
-#- name: Custom Link
-# url_pdf: '#'
 url_source: 'https://doi.org/10.1007/s10928-020-09705-0'
 links:
 - icon: file

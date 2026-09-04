@@ -26,9 +26,6 @@ tags:
 - pharmacokinetics
 featured: false
 
-links:
-#- name: Custom Link
-#  url: http://example.org
 url_source: 'https://doi.org/10.3389/fphar.2018.00588'
 links:
 - icon: file
