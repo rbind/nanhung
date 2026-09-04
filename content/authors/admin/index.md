@@ -1,6 +1,6 @@
 ---
 # Display name
-name: Nan-Hung Hsieh
+name: Nan-Hung Hsieh, Ph.D.
 
 # Username (this should match the folder name)
 authors:
@@ -10,7 +10,7 @@ authors:
 superuser: true
 
 # Role/position
-role: Ph.D
+#role: Ph.D
 
 # Organizations/Affiliations
 #organizations:
@@ -20,21 +20,20 @@ role: Ph.D
 # Short bio (displayed in user profile at end of posts)
 # bio: 
 
-interests:
-- <strong>Pharmacokinetics</strong>
-- <strong>Bayesian Statistics</strong>
-- <strong>Open Source Software</strong>
+#interests:
+#- <strong>Exposure Modeling</strong>
+#- <strong>Bayesian Statistics</strong>
 
-education:
-  courses:
-  - course: PhD in Bioenvironmental Systems Engineering
-    institution: National Taiwan University
+#education:
+#  courses:
+#  - course: PhD in Bioenvironmental Systems Engineering
+#    institution: National Taiwan University
   #  year: 2013
-  - course: MSc in Bioenvironmental Systems Engineering
-    institution: National Taiwan University
+#  - course: MSc in Bioenvironmental Systems Engineering
+#    institution: National Taiwan University
   #  year: 2010
-  - course: BSc in Safety, Health and Environmental Engineering
-    institution: National United University
+#  - course: BSc in Safety, Health and Environmental Engineering
+#    institution: National United University
   #  year: 2007
 
 # Social/Academic Networking
@@ -49,9 +48,9 @@ social:
 - icon: google-scholar
   icon_pack: ai
   link: https://scholar.google.com/citations?user=AM1YgJAAAAAJ&hl=en&oi=sra
-- icon: publons
-  icon_pack: ai
-  link: https://publons.com/author/435686/nan-hung-hsieh
+#- icon: publons
+#  icon_pack: ai
+#  link: https://publons.com/author/435686/nan-hung-hsieh
 #- icon: orcid
 #  icon_pack: ai
 #  link: http://orcid.org/0000-0003-0163-2766
@@ -87,4 +86,4 @@ user_groups:
 - Visitors
 ---
 
-Nan-Hung Hsieh is a Toxicologist. His research focuses on [**uncertainty/variability**](https://www.epa.gov/expobox/uncertainty-and-variability) and [**probabilistic modeling**](https://www.epa.gov/risk/about-risk-assessment#whatisrisk) in quantitative systems toxicology/pharmacology. He is also a developer, contributor, and reviewer for some open-source software.
+Nan-Hung Hsieh is a Toxicologist at the [California Environmental Protection Agency](https://calepa.ca.gov/), specializing in pesticide exposure modeling and assessment.
