@@ -1,8 +1,8 @@
 {{- $scr := .Scratch -}}
 {
-  "name": "{{site.Title}}",
-  "short_name": "{{site.Title}}",
-  "lang": "{{site.LanguageCode}}",
+  "name": "{{.Site.Title}}",
+  "short_name": "{{.Site.Title}}",
+  "lang": "{{.Site.Language.Locale}}",
   "theme_color": "{{ $scr.Get "primary" }}",
   "background_color": "{{ $scr.Get "primary" }}",
   "icons": [{

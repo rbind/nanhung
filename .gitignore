@@ -1,8 +1,9 @@
 # IDE specific
 .idea/
 .vscode/
-resources/_gen/images
+resources/_gen/
 public/
+.hugo_build.lock
 
 # Jupyter
 .ipynb_checkpoints/

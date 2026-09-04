@@ -127,8 +127,8 @@
     {{ end }}
 
     {{/* Disqus Comment Count JS. */}}
-    {{ if and (eq .Site.Params.comments.engine 1) (site.Params.comments.disqus.show_count | default true) }}
-    <script id="dsq-count-scr" src="https://{{site.Params.comments.disqus.shortname}}.disqus.com/count.js" async></script>
+    {{ if and (eq .Site.Params.comments.engine 1) (.Site.Params.comments.disqus.show_count | default true) }}
+    <script id="dsq-count-scr" src="https://{{.Site.Params.comments.disqus.shortname}}.disqus.com/count.js" async></script>
     {{ end }}
 
     {{ $js_comment := printf "/* Source Themes Academic v%s | https://sourcethemes.com/academic/ */\n" hugo.Data.academic.version }}

@@ -1,16 +1,16 @@
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
-  "@type": {{site.Params.local_business_type | default .Site.Params.site_type}},
-  "@id": {{site.BaseURL}},
-  "name": {{site.Params.org_name | default .Site.Title}},
+  "@type": {{.Site.Params.local_business_type | default .Site.Params.site_type}},
+  "@id": {{.Site.BaseURL}},
+  "name": {{.Site.Params.org_name | default .Site.Title}},
   {{with .Site.Params.logo}}"logo": {{printf "img/%s" . | absURL}},{{end}}
   {{with .Site.Params.sharing_image}}"image": {{printf "img/%s" . | absURL}},{{end}}
   {{ if (eq .Site.Params.site_type "LocalBusiness") | and .Site.Params.coordinates }}
   "geo": {
     "@type": "GeoCoordinates",
-    "latitude": {{site.Params.coordinates.latitude}},
-    "longitude": {{site.Params.coordinates.longitude}}
+    "latitude": {{.Site.Params.coordinates.latitude}},
+    "longitude": {{.Site.Params.coordinates.longitude}}
   },
   {{end}}
   {{ with .Site.Params.address }}
@@ -24,6 +24,6 @@
   },
   {{end}}
   {{ with .Site.Params.phone }}"telephone": {{.}},{{end}}
-  "url": {{site.BaseURL}}
+  "url": {{.Site.BaseURL}}
 }
 </script>
