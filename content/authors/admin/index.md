@@ -51,18 +51,18 @@ social:
 #- icon: publons
 #  icon_pack: ai
 #  link: https://publons.com/author/435686/nan-hung-hsieh
-#- icon: orcid
-#  icon_pack: ai
-#  link: http://orcid.org/0000-0003-0163-2766
+- icon: orcid
+  icon_pack: ai
+  link: http://orcid.org/0000-0003-0163-2766
 #- icon: impactstory
 #  icon_pack: ai
 #  link: https://impactstory.org/u/0000-0003-0163-2766
 #- icon: researchgate
 #  icon_pack: ai
 #  link: https://www.researchgate.net/profile/Nan-Hung_Hsieh  
-- icon: linkedin
-  icon_pack: fab
-  link: https://www.linkedin.com/in/nhsie/  
+#- icon: linkedin
+#  icon_pack: fab
+#  link: https://www.linkedin.com/in/nhsie/  
 #- icon: twitter
 #  icon_pack: fab
 #  link: https://twitter.com/nanhung_hsieh
@@ -86,4 +86,4 @@ user_groups:
 - Visitors
 ---
 
-Nan-Hung Hsieh is a Toxicologist at the [California Environmental Protection Agency](https://calepa.ca.gov/), specializing in pesticide exposure modeling and assessment.
+I am a Toxicologist at the [California Department of Pesticide Regulation](https://www.cdpr.ca.gov/), specializing in human exposure modeling and assessment.

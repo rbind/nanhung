@@ -21,7 +21,7 @@ tags:
 - bayesian
 - PBPK
 - Pyrethroids
-featured: true
+featured: false
 
 links:
 url_poster: "/poster/2021-SOT.pdf"
