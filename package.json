@@ -1,0 +1,12 @@
+{
+  "name": "nanhung-site",
+  "private": true,
+  "scripts": {
+    "slide:html": "marp --html static/slide/260929_ntu.md -o static/slide/260929_ntu.html",
+    "slide:pdf": "marp --html --pdf static/slide/260929_ntu.md",
+    "slide:watch": "marp --html -w -s static/slide"
+  },
+  "devDependencies": {
+    "@marp-team/marp-cli": "^4.5.1"
+  }
+}
