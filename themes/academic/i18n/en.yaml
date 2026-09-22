@@ -52,6 +52,9 @@
 - id: btn_code
   translation: Code
 
+- id: btn_note
+  translation: Note
+
 - id: btn_dataset
   translation: Dataset
 
